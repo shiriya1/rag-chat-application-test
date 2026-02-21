@@ -1,5 +1,8 @@
 package com.ragchat.storage.controller;
 
+import com.ragchat.storage.controller.request.CreateSessionRequest;
+import com.ragchat.storage.controller.request.UpdateSessionRequest;
+import com.ragchat.storage.controller.response.SessionResponse;
 import com.ragchat.storage.domain.ChatSession;
 import com.ragchat.storage.service.SessionService;
 import jakarta.validation.Valid;

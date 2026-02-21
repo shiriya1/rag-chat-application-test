@@ -1,4 +1,4 @@
-package com.ragchat.storage.controller;
+package com.ragchat.storage.controller.request;
 
 public class UpdateSessionRequest {
 

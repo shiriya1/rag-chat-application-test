@@ -1,4 +1,4 @@
-package com.ragchat.storage.controller;
+package com.ragchat.storage.controller.request;
 
 import com.ragchat.storage.domain.Sender;
 import jakarta.validation.constraints.NotBlank;

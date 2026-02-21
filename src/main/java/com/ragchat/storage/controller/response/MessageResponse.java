@@ -1,4 +1,4 @@
-package com.ragchat.storage.controller;
+package com.ragchat.storage.controller.response;
 
 import com.ragchat.storage.domain.ChatMessage;
 import com.ragchat.storage.domain.Sender;
