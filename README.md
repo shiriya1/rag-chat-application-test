@@ -24,7 +24,7 @@ Copy `.env.example` to `.env` and set values as needed.
 | `RATE_LIMIT_REFILL_DURATION_SECONDS` | Refill window in seconds (default: 60) |
 | `SERVER_PORT` | Server port (default: 8080) |
 
-## Run with Docker (recommended)
+## Run with Docker 
 
 ```bash
 cp .env.example .env
