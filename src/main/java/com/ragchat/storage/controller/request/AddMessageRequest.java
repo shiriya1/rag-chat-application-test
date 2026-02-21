@@ -35,7 +35,7 @@ public class AddMessageRequest {
         this.context = context;
     }
 
-    Sender getSenderEnum() {
+   public Sender getSenderEnum() {
         try {
             return Sender.valueOf(sender);
         } catch (IllegalArgumentException e) {
