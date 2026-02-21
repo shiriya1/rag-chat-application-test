@@ -35,7 +35,7 @@ docker compose up --build
 - API: http://localhost:8080
 - Swagger UI: http://localhost:8080/swagger-ui.html
 - Health: http://localhost:8080/actuator/health
-- Adminer (DB UI): http://localhost:8081 (server: `db`, user: `ragchat`, password: `ragchat`, database: `ragchat`)
+- PGADMIN (DB UI): http://localhost:8081 (server: `db`, user: `ragchat`, password: `ragchat`, database: `ragchat`)
 
 ## Run locally (without Docker)
 
@@ -78,9 +78,4 @@ When the app is running, open http://localhost:8080/swagger-ui.html for interact
 
 - `GET /actuator/health` – returns application and database health. No API key required.
 
-## Tests
-
-```bash
-mvn test
-```
 
