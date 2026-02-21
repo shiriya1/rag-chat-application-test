@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      API_KEY: ${API_KEY:-sk_9fK3xL2vQ8mR7tY4zP1aW6nB0cH5uJ3}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/ragchat
+      SPRING_DATASOURCE_USERNAME: ragchat
+      SPRING_DATASOURCE_PASSWORD: ragchat
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ragchat
+      POSTGRES_USER: ragchat
+      POSTGRES_PASSWORD: ragchat
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ragchat -d ragchat"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@ragchat.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - db
+
+volumes:
+  pgdata:

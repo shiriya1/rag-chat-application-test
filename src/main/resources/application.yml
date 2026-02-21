@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: rag-chat-storage
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/ragchat}
+    username: ${SPRING_DATASOURCE_USERNAME:ragchat}
+    password: ${SPRING_DATASOURCE_PASSWORD:ragchat}
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  api-key: ${API_KEY:}
+  rate-limit:
+    capacity: ${RATE_LIMIT_CAPACITY:100}
+    refill-tokens: ${RATE_LIMIT_REFILL_TOKENS:100}
+    refill-duration-seconds: ${RATE_LIMIT_REFILL_DURATION_SECONDS:60}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when-authorized
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
