@@ -60,13 +60,13 @@ All `/api/*` requests must include header: `X-API-Key: <your-api-key>`.
 
 | Method | Path | Description |
 |--------|------|-------------|
-| POST | `/api/sessions` | Create session. Body: `{ "userId": "string", "title": "optional" }` |
-| GET | `/api/sessions` | List sessions. Query: `userId` (required), `favorite` (optional), `page`, `size` |
-| GET | `/api/sessions/{id}` | Get session. Query: `userId` |
-| PATCH | `/api/sessions/{id}` | Update session (title and/or favorite). Query: `userId`. Body: `{ "title": "optional", "favorite": optional boolean }` |
-| DELETE | `/api/sessions/{id}` | Delete session and its messages. Query: `userId` |
-| POST | `/api/sessions/{sessionId}/messages` | Add message. Query: `userId`. Body: `{ "sender": "USER" or "ASSISTANT", "content": "string", "context": "optional" }` |
-| GET | `/api/sessions/{sessionId}/messages` | Get message history (paginated). Query: `userId`, `page`, `size` |
+| POST | `/api/v1/sessions` | Create session. Body: `{ "userId": "string", "title": "optional" }` |
+| GET | `/api/v1/sessions` | List sessions. Query: `userId` (required), `favorite` (optional), `page`, `size` |
+| GET | `/api/v1/sessions/{id}` | Get session. Query: `userId` |
+| PATCH | `/api/v1/sessions/{id}` | Update session (title and/or favorite). Query: `userId`. Body: `{ "title": "optional", "favorite": optional boolean }` |
+| DELETE | `/api/v1/sessions/{id}` | Delete session and its messages. Query: `userId` |
+| POST | `/api/v1/sessions/{sessionId}/messages` | Add message. Query: `userId`. Body: `{ "sender": "USER" or "ASSISTANT", "content": "string", "context": "optional" }` |
+| GET | `/api/v1/sessions/{sessionId}/messages` | Get message history (paginated). Query: `userId`, `page`, `size` |
 
 Responses use standard HTTP status codes. Errors return JSON like: `{ "error": "CODE", "message": "..." }`.
 
