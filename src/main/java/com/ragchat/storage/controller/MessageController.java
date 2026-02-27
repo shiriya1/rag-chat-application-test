@@ -4,6 +4,7 @@ import com.ragchat.storage.controller.request.AddMessageRequest;
 import com.ragchat.storage.controller.response.MessageResponse;
 import com.ragchat.storage.domain.ChatMessage;
 import com.ragchat.storage.service.MessageService;
+import com.ragchat.storage.service.impl.MessageServiceImpl;
 import jakarta.validation.Valid;
 import java.util.UUID;
 import org.springframework.data.domain.Page;
@@ -20,12 +21,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/sessions/{sessionId}/messages")
+@RequestMapping("/api/v1/sessions/{sessionId}/messages")
 public class MessageController {
 
     private final MessageService messageService;
 
-    public MessageController(MessageService messageService) {
+    public MessageController(MessageServiceImpl messageService) {
         this.messageService = messageService;
     }
 

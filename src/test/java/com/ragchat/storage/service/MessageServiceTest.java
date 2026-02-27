@@ -4,6 +4,8 @@ import com.ragchat.storage.domain.ChatMessage;
 import com.ragchat.storage.domain.ChatSession;
 import com.ragchat.storage.domain.Sender;
 import com.ragchat.storage.repository.ChatMessageRepository;
+import com.ragchat.storage.service.impl.MessageServiceImpl;
+import com.ragchat.storage.service.impl.SessionServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -29,10 +31,10 @@ class MessageServiceTest {
     private ChatMessageRepository messageRepository;
 
     @Mock
-    private SessionService sessionService;
+    private SessionServiceImpl sessionService;
 
     @InjectMocks
-    private MessageService messageService;
+    private MessageServiceImpl messageService;
 
     @Test
     void add_persistsMessageAndReturnsIt() {

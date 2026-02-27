@@ -3,6 +3,7 @@ package com.ragchat.storage.service;
 import com.ragchat.storage.domain.ChatSession;
 import com.ragchat.storage.exception.SessionNotFoundException;
 import com.ragchat.storage.repository.ChatSessionRepository;
+import com.ragchat.storage.service.impl.SessionServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -30,7 +31,7 @@ class SessionServiceTest {
     private ChatSessionRepository sessionRepository;
 
     @InjectMocks
-    private SessionService sessionService;
+    private SessionServiceImpl sessionService;
 
     @Test
     void create_savesNewSession() {

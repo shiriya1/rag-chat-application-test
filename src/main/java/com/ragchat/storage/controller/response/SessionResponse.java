@@ -1,9 +1,14 @@
 package com.ragchat.storage.controller.response;
 
 import com.ragchat.storage.domain.ChatSession;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.Instant;
 import java.util.UUID;
 
+@Getter
+@Setter
 public class SessionResponse {
 
     private UUID id;
@@ -24,51 +29,4 @@ public class SessionResponse {
         return r;
     }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public boolean isFavorite() {
-        return favorite;
-    }
-
-    public void setFavorite(boolean favorite) {
-        this.favorite = favorite;
-    }
-
-    public Instant getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Instant createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Instant getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Instant updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }
