@@ -31,7 +31,7 @@
               "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"title\": \"My first chat\"\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/sessions",
+              "raw": "{{baseUrl}}/api/v1/sessions",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -56,7 +56,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/api/sessions?userId={{userId}}&favorite=&page=0&size=20",
+              "raw": "{{baseUrl}}/api/v1/sessions?userId={{userId}}&favorite=&page=0&size=20",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -103,7 +103,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/api/sessions/{{sessionId}}?userId={{userId}}",
+              "raw": "{{baseUrl}}/api/v1/sessions/{{sessionId}}?userId={{userId}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -144,7 +144,7 @@
               "raw": "{\n  \"title\": \"Updated chat title\",\n  \"favorite\": true\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/sessions/{{sessionId}}?userId={{userId}}",
+              "raw": "{{baseUrl}}/api/v1/sessions/{{sessionId}}?userId={{userId}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -176,7 +176,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/api/sessions/{{sessionId}}?userId={{userId}}",
+              "raw": "{{baseUrl}}/api/v1/sessions/{{sessionId}}?userId={{userId}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -222,7 +222,7 @@
               "raw": "{\n  \"sender\": \"USER\",\n  \"content\": \"What is RAG?\",\n  \"context\": \"Optional RAG retrieved context (e.g. document snippets)\"\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/sessions/{{sessionId}}/messages?userId={{userId}}",
+              "raw": "{{baseUrl}}/api/v1/sessions/{{sessionId}}/messages?userId={{userId}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -255,7 +255,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/api/sessions/{{sessionId}}/messages?userId={{userId}}&page=0&size=50",
+              "raw": "{{baseUrl}}/api/v1/sessions/{{sessionId}}/messages?userId={{userId}}&page=0&size=50",
               "host": [
                 "{{baseUrl}}"
               ],
